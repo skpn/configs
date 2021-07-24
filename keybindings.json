@@ -1,0 +1,166 @@
+// Place your key bindings in this file to override the defaults
+[
+	{
+		"key": "ctrl+.",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "! activeEditorGroupFocus"
+	},
+	{
+		"key": "ctrl+.",
+		"command": "workbench.action.focusSideBar",
+		"when": "! sideBarFocus"
+	},
+	{
+		"key": "alt+right",
+		"command": "workbench.action.nextEditor",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+left",
+		"command": "workbench.action.previousEditor",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+alt+right",
+		"command": "editor.action.moveCarretRightAction",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+alt+left",
+		"command": "editor.action.moveCarretLeftAction",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "workbench.action.terminal.new",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+a",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+z",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+shift+alt+h",
+		"command": "workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus",
+		"args": {
+			"snippet": "ç"
+		}
+	},
+	{
+		"key": "alt+l",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus",
+		"args": {
+			"snippet": "console.log('$1')$2;"
+		}
+	},
+	{
+		"key": "alt+shift+l",
+		"command": "extension.multiCommand.execute",
+		"when": "editorTextFocus",
+		"args": {
+			"sequence": [
+				{
+					"command": "editor.action.clipboardCopyAction"
+				},
+				{
+					"command": "editor.action.insertLineAfter"
+				},
+				{
+					"command": "editor.action.insertSnippet",
+					"args": {
+						"snippet": "console.log(\"$CLIPBOARD$1:\", $CLIPBOARD$2)"
+					}
+				}
+			]
+		}
+	},
+	{
+		"key": "alt+p",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus",
+		"args": {
+			"snippet": "print(f\"$1\")$2"
+		}
+	},
+	{
+		"key": "alt+shift+p",
+		"command": "extension.multiCommand.execute",
+		"when": "editorTextFocus",
+		"args": {
+			"sequence": [
+				{
+					"command": "editor.action.clipboardCopyAction"
+				},
+				{
+					"command": "editor.action.insertLineAfter"
+				},
+				{
+					"command": "editor.action.insertSnippet",
+					"args": {
+						"snippet": "print(f\"$CLIPBOARD$1: {$CLIPBOARD$2}\")"
+					}
+				}
+			]
+		}
+	},
+	{
+		"key": "ctrl+alt+6",
+		"command": "workbench.action.navigateBack",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+space",
+		"command": "toggle",
+		"when": "editorTextFocus",
+		"args": {
+			"id": "wrapTabs",
+			"value": [
+				{
+					"workbench.editor.wrapTabs": true
+				},
+				{
+					"workbench.editor.wrapTabs": false
+				}
+			]
+		}
+	},
+	{
+		"key": "alt+x",
+		"command": "workbench.action.navigateBack"
+	},
+	{
+		"key": "alt+shift+x",
+		"command": "workbench.action.navigateForward"
+	},
+	{
+		"key": "ctrl+shift+m",
+		"command": "editor.emmet.action.wrapWithAbbreviation",
+		"when": "editorHasSelection"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "workbench.action.toggleMaximizedPanel"
+	},
+]
