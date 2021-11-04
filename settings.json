@@ -11,6 +11,7 @@
     "editor.renderWhitespace": "all",
     "workbench.panel.defaultLocation": "left",
     "workbench.editor.wrapTabs": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "python.showStartPage": false,
@@ -42,6 +43,9 @@
     "editor.fontSize": 19,
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modifications",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.prettier": true
+    },
     "svelte.plugin.svelte.format.config.svelteSortOrder": "options-scripts-styles-markup",
     "update.showReleaseNotes": false,
     "update.mode": "none",
