@@ -18,7 +18,7 @@ module.exports = {
   },
   "ignorePatterns": ['node_modules'],
   "rules": {
-    "no-use-before-define": ["error", "nofunc"]
+    "no-use-before-define": ["error", "nofunc"],
   },
   "overrides": [
     {
@@ -28,6 +28,7 @@ module.exports = {
       },
       "settings": {
         "svelte3/ignore-styles": () => true,
+        "svelte3/ignore-warnings": (warning) => warning.code.includes("a11y") || warning.code.includes("A11y"),
       }
     },
     {
